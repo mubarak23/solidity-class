@@ -1,0 +1,23 @@
+# dotenv: .env
+# dependencies:
+#   - smartcontractkit/chainlink-brownie-contracts@1.1.1
+# compiler:
+#   solc:
+#     ramappings:
+#       - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+
+
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+reports:
+  exclude_contracts:
+    - SafeMath
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.0.2
+  - OpenZeppelin/openzeppelin-contracts@3.4.0
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.0.2'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0'
+
